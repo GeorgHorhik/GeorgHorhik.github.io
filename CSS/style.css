@@ -1,0 +1,344 @@
+/*generall styles*/
+.body, .main-nav, .features__list, .list__ol__h2, .list__ol__p, .list__ul__h2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  margin: -1px;
+  padding: 0;
+  font-size: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+.h1 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.p {
+  color: #333333;
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+html {
+  background-color: #eeeeee;
+}
+
+/*Header*/
+.body {
+  color: black;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-family: 'PT Sans','arial' ,sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-width: 768px;
+  -webkit-box-shadow: 0px 0px 10px 0px;
+          box-shadow: 0px 0px 10px 0px;
+}
+
+.main__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 768px;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 768px;
+}
+
+.nav-item {
+  width: 20%;
+}
+
+.nav-item:first-child {
+  margin-left: 6%;
+  width: 24%;
+}
+
+.nav-item:last-child {
+  margin-right: 6%;
+  width: 24%;
+}
+
+.nav-item:nth-child(1n+3) {
+  text-align: right;
+}
+
+.nav-item a {
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+
+.item_center {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.logo__img {
+  top: 0;
+  position: absolute;
+  z-index: 10;
+  left: calc(50% - 69px);
+  width: 138;
+  height: 70;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../img/background_photo.png) no-repeat 0% 29%;
+  position: relative;
+}
+
+.intro::before {
+  content: ' ';
+  width: 100%;
+  min-height: 6vh;
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../svg/white1.svg), url(../svg/white2.svg);
+  background-repeat: no-repeat;
+  background-position-x: 0%, 20%;
+  background-size: cover, 50% 100%;
+}
+
+.intro::after {
+  content: ' ';
+  width: 100%;
+  min-height: 6vh;
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../svg/white1.svg), url(../svg/white2.svg);
+  background-repeat: no-repeat;
+  background-position-x: 0%, 20%;
+  background-size: cover, 50% 100%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.image-intro1 {
+  margin-top: 76px;
+}
+
+.image-intro2 {
+  margin-top: 11px;
+}
+
+.image-intro3 {
+  margin-top: 52px;
+}
+
+.image-intro4 {
+  margin-top: 56px;
+  margin-bottom: 80px;
+}
+
+/*index styles*/
+.features__h1 {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 61px;
+  width: 450px;
+  color: #333333;
+}
+
+.features__introduction {
+  margin: 0 auto;
+  margin-top: 29px;
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features__list li:nth-child(1) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.features__list li:nth-child(2) {
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
+}
+
+.features__list li:nth-child(3) {
+  -webkit-box-ordinal-group: 9;
+      -ms-flex-order: 8;
+          order: 8;
+}
+
+.features__list li:nth-child(4) {
+  -webkit-box-ordinal-group: 10;
+      -ms-flex-order: 9;
+          order: 9;
+}
+
+.features__list li:nth-child(5) {
+  -webkit-box-ordinal-group: 11;
+      -ms-flex-order: 10;
+          order: 10;
+}
+
+.features__list li:nth-child(6) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.features__list li:nth-child(7) {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.features__list li:nth-child(8) {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+
+.features__list li:nth-child(9) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.features__list li:nth-child(10) {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+
+.features__list-item {
+  color: black;
+  background-color: #eeeeee;
+  text-align: center;
+  padding-top: 43px;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  padding-right: 5.3%;
+  width: 23%;
+  background-clip: padding-box;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.list__ol_lightblue {
+  color: white;
+  background-color: #81b3d2;
+}
+
+.list__ol_lightblue .list__ol__p {
+  color: white;
+}
+
+.list__ol__h2 {
+  margin-bottom: 0.8em;
+  line-height: 24px;
+}
+
+.list__img {
+  overflow: hidden;
+  height: 256px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 66%;
+}
+
+.list__img img {
+  width: 100%;
+}
+
+.list__ul__h2 {
+  position: relative;
+  margin-top: 115px;
+}
+
+.ul__icon-1::before {
+  content: url(../svg/icon-1.svg);
+  max-width: 75px;
+  max-height: 76px;
+  position: absolute;
+  top: -100px;
+  left: calc(50% - 36px);
+}
+
+.ul__icon-2::before {
+  content: url(../svg/icon-2.svg);
+  max-width: 75px;
+  max-height: 76px;
+  position: absolute;
+  top: -100px;
+  left: calc(50% - 36px);
+}
+
+.ul__icon-3::before {
+  content: url(../svg/icon-3.svg);
+  max-width: 75px;
+  max-height: 76px;
+  position: absolute;
+  top: -100px;
+  left: calc(50% - 36px);
+}
+
+/*hotel sytles*/
+/*# sourceMappingURL=style.css.map */
