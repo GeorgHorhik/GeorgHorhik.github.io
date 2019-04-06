@@ -99,10 +99,35 @@
         <h2 class="h2 booking__h2">ЗАИНТЕРЕСОВАЛИСЬ?</h2> 
         <p class="p booking__p">Укажите предполагаемые даты поездки, 
             и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a href="#map" class="btn booking__btn btn_brown">ПОИСК ГОСТИНИЦЫ В седоне</a>
+        <a href="#booking__popup" class="btn booking__btn btn_brown">ПОИСК ГОСТИНИЦЫ В седоне</a>
+        <section class="booking__popup" id="booking__popup">
+            <h3 class="visually-hidden" >
+                Забронируйте гостиницу
+            </h3>
+            <form action="post" class="booking__form">
+                <label class="form__laber__date booking_inner"> <span class="booking__span">Дата заезда:</span><input type="date" name="date-from" class=" booking__input__text input__text date-from" value="2017-04-24"></label>
+                <label class="form__laber__date booking_inner"> <span class="booking__span">Дата Выезда:</span><input type="date" name="date-to" class=" booking__input__text input__text date-to" value="2017-06-04"></label>
+                <div class="booking_inner">
+                        <div class="booking_inner">
+                <label ><span class="booking__span span_sign">ВзрослыЕ:</span>   <input type="number" name="adult" class="adult input__text  visually-hidden"></label>
+                    <div class="adult_under"><button class="form-minus form-signs btn" type="button">-</button>
+                    <input type="text" name="adult-value" id="adult-value" class="input__text form__text-number">
+                    <button class="form-plus form-signs btn" type="button" >+</button></div>
+                </div>
+                        <div class="booking_inner">
+                <label> <span class="booking__span span_sign"> ДетИ:</span><input type="number" name="adult" class="child input__text  visually-hidden" ></label>
+                    <div class="adult_under"><button class="form-minus form-signs btn" type="button">-</button>
+                    <input type="text" name="child-value" id="child-value" class="input__text form__text-number">
+                    <button class="form-plus form-signs btn" type="button" >+</button></div>
+                </div>
+                </div>
+                    <input type="submit" class="btn booking__btn__submit btn_blue" value="НАЙТИ">
+            </form>
+        </section>
     </section>
+
     <figure class="booking__map">
-        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418409.50813911133!2d-111.73262740285955!3d34.985808868878124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1554221921739!5m2!1sen!2sru" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418409.50813911133!2d-111.73262740285955!3d34.985808868878124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1554221921739!5m2!1sen!2sru" width="100%" height="475" frameborder="0" style="border:0" allowfullscreen></iframe>
     </figure>
     <footer class="footer main-footer">
         <strong class="footer__hashtag">
@@ -114,9 +139,9 @@
             <li class="social-buttons__item social-buttons_tiem-3">youtube</li>
         </ul>
         <p class="copyright" aria-label="copyright">
-            WEBSITE by <img src="../img/MyGithub.png" alt="GeorgHorhik">
+            WEBSITE by <img src="../img/MyGithub.jpg" alt="GeorgHorhik">
         </p>
     </footer>
 </main>
 </body>
-</html>
+</html> 

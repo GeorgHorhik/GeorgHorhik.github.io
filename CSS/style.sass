@@ -1,5 +1,6 @@
 /*generall styles*/
 $light-gray: #eeeeee
+$gray: #f2f2f2
 $light-blue: #81b3d2
 $brown: #766357
 %zero
@@ -38,8 +39,21 @@ $brown: #766357
     text-decoration: none
     font: inherit
     color: white
+    border: none
+    font-size: 21px
+    font-weight: 700
+    line-height: 26px
+    text-transform: uppercase
     &_brown
         background-color: $brown
+    &_blue
+        background-color: $light-blue
+.input__text
+    font: inherit
+    border: none
+    background-color: $gray
+    padding: 6px 14px
+    margin: 0
 html
     background-color: $light-gray
 
@@ -180,7 +194,7 @@ html
         order: 2
     & li:nth-child(10)
         order: 6
-    &-item
+
 
 
 
@@ -199,13 +213,16 @@ html
     flex-grow: 1
     & .p
         line-height: 21px
+
 @media (max-width: 768px) 
     .features__list-item:not(.list__ul)
         padding-bottom: 16px 
     .list__ul
         padding-bottom: 29px
     .list__ol:nth-child(1n+3)
-        padding-bottom: 20px !important
+        padding-bottom: 40px !important
+    .list__img img
+        top: 0
 .list__ol_lightblue
     color: white
     background-color: $light-blue
@@ -229,7 +246,8 @@ html
     & img
         width: 100%
         position: absolute
-        top: 256px
+        top: 0px
+
 
 .list__ul__h2
     position: relative
@@ -252,8 +270,10 @@ html
 
 
 /*hotel sytles*/
+
 /*Footer-sytles*/
 .booking
+    position: relative
     margin: 0 auto
     padding: 0
     text-align: center
@@ -277,6 +297,11 @@ html
         padding: 30px 140px
         background-color: $brown
         align-self: center
+        &__submit
+            align-self: stretch
+            width: 100%
+            margin-top: 54px
+            padding: 16px 0px
 
 
     &__p
@@ -290,3 +315,92 @@ html
         align-self: center
     &__h2
         margin-top: 55px
+    &__popup
+        z-index: 10
+        position: absolute
+        width: 460px
+        background-color: #fff
+        box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2)
+        top: 100%
+        padding: 55px
+    &__form
+        font-size: 14px
+        font-weight: 700
+        line-height: 26px
+        text-transform: uppercase
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__span
+        display: inline-block
+        padding:
+            top: 6px
+            bottom: 6px
+    &__input__text
+        width: 70%
+.form-signs
+    width: 38px
+    height: 38px
+    background-color: $gray
+    display: inline-block
+    font: inherit
+    color: #a8a8a8
+.form__text-number
+    background-color: $gray
+    width: 38px
+    height: 38px
+    padding: 0
+.form__laber__date
+    display: block
+    margin-bottom:  28px
+
+.booking_inner
+    display: flex
+    justify-content: space-between
+    flex-wrap: nowrap
+.span_sign
+    margin-right: 40px
+    display: inline-block
+
+#booking__popup
+    visibility: hidden
+    transition: 1s
+    opacity: 0
+#booking__popup:target
+    visibility: visible
+    opacity: 1
+.main-footer
+    display: flex
+    justify-content: space-around
+    padding:  36px 72px   
+    align-items: center
+.footer__hashtag
+        font-size: 21px
+        font-weight: 700
+        line-height: 26px
+        text-transform: uppercase
+.social-buttons
+    display: flex
+    justify-content: space-between
+    width: 150px
+    &__item
+        width: 48px
+        height: 48px
+        font-size: 0
+        background-color: $light-blue
+        background-position: center
+        background-repeat: no-repeat
+@for $btn from 1 through 3
+    .social-buttons_tiem-#{$btn}
+        background-image: url(../svg/social-#{$btn}.svg)
+    
+.copyright  
+    display: flex
+    align-items: center
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    text-transform: uppercase  
+    & img
+        width: 50px
+        margin-left: 10px
