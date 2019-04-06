@@ -3,6 +3,7 @@ $light-gray: #eeeeee
 $gray: #f2f2f2
 $light-blue: #81b3d2
 $brown: #766357
+$active: $brown
 %zero
     margin: 0
     padding: 0
@@ -46,8 +47,20 @@ $brown: #766357
     text-transform: uppercase
     &_brown
         background-color: $brown
+        transition: 0.2s
+        &:hover, &:focus
+            background-color: darken( $brown,5%)
+        &:active
+            color: rgba( white, .5)
+            background-color: darken($brown, 10%)
     &_blue
         background-color: $light-blue
+        transition: 0.2s
+        &:hover, &:focus
+            background-color: darken($light-blue,5%)
+        &:active
+            color: rgba( white, .5 )
+            background-color: darken($light-blue, 10%)
 .input__text
     font: inherit
     border: none
@@ -95,6 +108,7 @@ html
     &:nth-child(1n+3)
         text-align: right
     & a
+        transition: 0.2s
         font-weight: 700
         color: black
         text-decoration: none
@@ -103,6 +117,13 @@ html
         padding: 
             top: 14px
             bottom: 15px
+        &:hover, &:focus
+            color: $light-blue
+        &:active
+            color: black
+            opacity: 0.3
+.nav-item_acive
+    color: $active !important
 .item_center
     flex-grow: 1
 
@@ -243,10 +264,14 @@ html
     flex-grow: 2
     position: relative
     width: 66%
+    transition: 1s
     & img
+        transition: 1s
         width: 100%
         position: absolute
         top: 0px
+        &:hover, &:focus
+            transform: scale(1.1)
 
 
 .list__ul__h2
@@ -339,17 +364,23 @@ html
     &__input__text
         width: 70%
 .form-signs
+    font-size: 16px
     width: 38px
     height: 38px
     background-color: $gray
     display: inline-block
     font: inherit
     color: #a8a8a8
+    &:hover, &:focus
+        color: black
+    &:active
+        color: $light-blue
 .form__text-number
     background-color: $gray
     width: 38px
     height: 38px
     padding: 0
+    text-align: center
 .form__laber__date
     display: block
     margin-bottom:  28px
@@ -366,12 +397,14 @@ html
     visibility: hidden
     transition: 1s
     opacity: 0
+    &:hover, &:focus
+
 #booking__popup:target
     visibility: visible
     opacity: 1
 .main-footer
     display: flex
-    justify-content: space-around
+    justify-content: space-beetween
     padding:  36px 72px   
     align-items: center
 .footer__hashtag
@@ -383,24 +416,48 @@ html
     display: flex
     justify-content: space-between
     width: 150px
+    margin: 0
+    padding: 0
     &__item
+        transition: 0.2
         width: 48px
         height: 48px
         font-size: 0
         background-color: $light-blue
         background-position: center
         background-repeat: no-repeat
+        margin-right: 6px
+        &:active
+            opacity: 0.3
 @for $btn from 1 through 3
     .social-buttons_tiem-#{$btn}
         background-image: url(../svg/social-#{$btn}.svg)
-    
-.copyright  
+.footer__container
+    display: block
+    width: 33%
     display: flex
+    justify-content: center
     align-items: center
+.copyright  
     font-size: 14px
     font-weight: 400
     line-height: 26px
-    text-transform: uppercase  
+    text-transform: uppercase 
+    position: relative
+    display: flex
+.copyright__a
+    display: block
+    position: relative
+    width: 50px
+    height: 50px
+    margin-left: 10px
+    overflow: hidden
     & img
         width: 50px
-        margin-left: 10px
+        position: relative
+        transition: 0.5s
+        &:hover, &:focus
+            transform: scale(1.2)
+
+
+       
