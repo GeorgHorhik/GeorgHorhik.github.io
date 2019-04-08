@@ -9,7 +9,7 @@ $active: $brown
     padding: 0
     list-style: none
 
-.visually-hidden 
+.visually-hidden
     margin: -1px
     padding: 0
     font-size: 0
@@ -70,6 +70,22 @@ $active: $brown
 html
     background-color: $light-gray
 
+.label__input_checkbox
+    margin-left: 40px
+    position: relative 
+    margin-bottom: 15px
+    display: inline-block
+    &::before
+        content:  url(../svg/checkbox-on.svg)
+        width: 2em
+        height: 2em
+        position: absolute
+        top: 0
+        left: -40px
+.custom-checkbox:checked + .label__input_checkbox::before
+    content: url(../svg/checkbox-off.svg)
+
+
 /*Header*/
 .body
     padding: 0
@@ -126,6 +142,7 @@ html
     color: $active !important
 .item_center
     flex-grow: 1
+    position: relative
 
 
 .logo__img
@@ -235,15 +252,7 @@ html
     & .p
         line-height: 21px
 
-@media (max-width: 768px) 
-    .features__list-item:not(.list__ul)
-        padding-bottom: 16px 
-    .list__ul
-        padding-bottom: 29px
-    .list__ol:nth-child(1n+3)
-        padding-bottom: 40px !important
-    .list__img img
-        top: 0
+
 .list__ol_lightblue
     color: white
     background-color: $light-blue
@@ -295,13 +304,40 @@ html
 
 
 /*hotel sytles*/
-.hotels-form
-    padding: 0
-    margin: 0
-    background-image: url(../img/filter_background.png)
-    background-position: center 
-    overflow: hidden
-    color: #333333
+.hotels
+    &-container
+        margin: 0 auto
+        padding: 35px 72px
+        color: white
+        display: flex
+        justify-content: space-between
+    &-form
+        padding: 0
+        margin: 0
+        background-image: url(../img/filter_background.png)
+        background-position: center 
+        overflow: hidden
+        color: #333333
+        width: 100%
+    &__fieldset
+        padding: 0
+        margin: 0
+        border: none
+        width: 33.3%
+        &__checkbox
+            width: 50%
+    &__legend
+        font-size: 16px
+        font-weight: 700
+        line-height: 21px
+        text-transform: uppercase
+        margin-bottom: 14px
+.checkbox-inner
+    display: flex
+    justify-content: space-between
+    width: 40%
+        
+
 %track
     z-index: 1
     cursor: pointer
@@ -323,12 +359,8 @@ html
     transition: 0.2s
     &:hover, &:focus, &:active
         transform: scale(1.1)
-.form
-    margin: 0 auto
-    width: 350px
+.form        
     background-color: #eeeeee
-    margin-top: 40vh
-    padding: 50px
     display: flex
     flex-wrap: nowrap
     justify-content: space-between
@@ -341,8 +373,7 @@ html
     text-transform: uppercase
     &__output
         border: 2px solid #ffffff;
-        width: 50%
-        padding: 10px
+        width: 100%
         color: #000
         text-align: center
         color: white
@@ -359,6 +390,7 @@ html
             display: flex
             justify-content: space-between
             margin-bottom: 22px
+            width: 100%
     &__submit
         font: inherit
         border: 2px solid #ffffff
@@ -435,6 +467,12 @@ html
             background: #fff
             height: 2px
 
+
+.found
+    display: flex
+    &__sort
+        display: flex
+        @extend %zero
 /*Footer-sytles*/
 .booking
     position: relative
@@ -600,3 +638,18 @@ html
 
 
        
+/*media*/
+
+@media (max-width: 768px) 
+    .features__list-item:not(.list__ul)
+        padding-bottom: 16px 
+    .list__ul
+        padding-bottom: 29px
+    .list__ol:nth-child(1n+3)
+        padding-bottom: 40px !important
+    .list__img img
+        top: 0
+    .hotels-container
+        padding:  35px 46px
+    .checkbox-inner
+        width: 50%
