@@ -1,4 +1,6 @@
 /*generall styles*/
+$hover: ":hover, &:focus"
+$hover-active: ":hover, &:focus, &:active"
 $light-gray: #eeeeee
 $gray: #f2f2f2
 $light-blue: #81b3d2
@@ -467,12 +469,93 @@ html
             background: #fff
             height: 2px
 
-
+.hotel_container
+    padding: 34px 72px
 .found
     display: flex
+    justify-content: space-between
+    align-items: center
+    &__div
+        display: flex
+    &__b
+        margin-top: 5px
+        font-size: 12px
+        font-weight: 400
+        line-height: 18px
+        // font-size: 21px
+        // font-weight: 700
+        // line-height: 26px
+    &__h2
+        font-size: 21px
+        font-weight: 700
+        line-height: 26px
+        display: flex
+        list-style: none    
     &__sort
         display: flex
         @extend %zero
+        margin-left: 40px
+        &__item
+            margin-right: 33px
+            &__a
+                box-sizing: border-box
+                font-size: 12px
+                font-weight: 400
+                line-height: 
+                border-bottom: 1px dotted $light-blue
+                color: rgba(black, 0.3)
+                text-decoration: none
+            &__active
+                color: $light-blue !important
+        &-size
+            @extend %zero
+            width: 34px
+            min-height: 8px
+            display: flex
+            justify-content: space-between
+            text-align: center
+.arrows
+    border: 
+        left: 5.5px solid transparent
+        right: 5.5px solid transparent
+    display: block
+    &_top
+        border:    
+            top: 5px solid transparent
+            bottom: 10px solid #cacaca
+        &#{$hover}
+            border:
+                bottom: 10px solid $light-blue
+        &:active
+            border:
+                bottom: 10px solid black
+    &_bottom
+        border:    
+            top: 10px solid #cacaca
+            bottom: 5px solid transparent
+        
+        &#{$hover}, &_active
+            border:
+                top: 10px solid $light-blue
+        &:active
+            border:
+                top: 10px solid black
+.arrows_bottom_acitve
+    border-top: 10px solid $light-blue 
+    
+.found-list__ul
+    display: flex
+    flex-direction: column
+    list-style: none
+.hotels-item
+    display: flex
+    justify-content: space-between
+.hotel-info
+    display: flex
+    justify-content: space-between
+    width: 424px
+    align-items: center
+   
 /*Footer-sytles*/
 .booking
     position: relative
@@ -649,7 +732,7 @@ html
         padding-bottom: 40px !important
     .list__img img
         top: 0
-    .hotels-container
+    .hotels-container,.hotel_container
         padding:  35px 46px
     .checkbox-inner
         width: 50%

@@ -16,16 +16,20 @@
                              nav-item_acive -->
                         <li class="nav-item"><a href="#info" class="">ИНФОРМАЦИЯ</a></li>
                         <li class="items_middle nav-item"><a href="#foto">ФОТО И ВИДЕО</a></li>
-                        <li class="nav-item item_center"><img class="logo__img" src="img/logo@2x.png" alt="Логотип SEDONA"></li>
+                        <li class="nav-item item_center">
+                            <a href="index.html">
+                            <img class="logo__img" src="img/logo@2x.png" alt="Логотип SEDONA">
+                            </a>
+                        </li>
                         <li class="items_middle nav-item"><a href="#map">КАРТА ШТАТА</a></li>
                         <li class="nav-item"><a href="HTML/hotels.html" class="nav-item_acive">ГОСТИНИЦЫ</a></li>
                     </ul>
                 </nav>
             </header>
-                <mian class="main hotels">
+                <main class="main hotels">
                     <section class="hotels-form">
                         <h2 class="visually-hidden">Выбор ГОСТИНИЦЫ</h2>
-                        <form   class="hotels-container" method="get" oninput="from_out.value=from_in.value, to_out.value=to_in.value" class=" hotels__form">
+                        <form   class="hotels-container hotels__form" method="get" oninput="from_out.value=from_in.value, to_out.value=to_in.value" >
                             <div class="checkbox-inner">
                                 <fieldset class="fieldset hotels__fieldset hotels__fieldset__checkbox">
                                 <legend class="legend hotels__legend" >ИНФОРМАЦИЯ</legend>
@@ -36,7 +40,7 @@
                                     <input class=" visually-hidden custom-checkbox" type="checkbox" name="wifi" id="wifi">
                                     <label class="hotels__form__label label__input_checkbox" for="wifi"><span class="hotels__form__span ">Wi-Fi</span></label>
                                 </fieldset>
-                                <fieldset class="fieldset hotels__fieldset hotels__fieldset__checkbox   ">
+                                <fieldset class="fieldset hotels__fieldset hotels__fieldset__checkbox">
                                     
                                     <legend class="legend hotels__legend" >Тип жилья:</legend>
                                     <input class=" visually-hidden custom-checkbox" type="checkbox" name="hotel" id="hotel">
@@ -63,88 +67,94 @@
                             </fieldset>
                         </form>
                     </section>
-                    <section class="found">
+                    <section class="found hotel_container">
                         <h2 class="found__h2">Найдено  <span class="found-number">3</span></h2>
                         
-                        <div calss="found__div">
-                        <b>СОРТИРОВКА:</b>
+                        <div class="found__div">
+                        <b class="b found__b">СОРТИРОВКА:</b>
                             <ul class="found__sort">
-                                <li class="found__sort__item"><a class="found__sort__item_active" href="#">ПО ЦЕНЕ</a></li>
-                                <li class="found__sort__item"><a href="#">ПО ТИПУ</a></li>
-                                <li class="found__sort__item"><a href="#">ПО РЕЙТИНГУ </a></li>
+                                <li class="found__sort__item"><a class="found__sort__item__a found__sort__item__active" href="#">ПО ЦЕНЕ</a></li>
+                                <li class="found__sort__item"><a class="found__sort__item__a " href="#">ПО ТИПУ</a></li>
+                                <li class="found__sort__item"><a class="found__sort__item__a " href="#">ПО РЕЙТИНГУ </a></li>
                             </ul>
                         </div>
                         <ul class="found__sort-size">
-                            <li><a href="#" class="arrows arrows_top"></a></li>
-                            <li><a href="#" class="arrows arrows_bottom"></a></li>
+                            <li><a href="#" class="arrows arrows_top "></a></li>
+                            <li><a href="#" class="arrows arrows_bottom arrows_bottom_acitve"></a></li>
                         </ul>
                     </section>
-                    <section class="found-list">
+                    <section class="found-list hotel_container">
                         <h2 class="visually-hidden">Список гостиниц</h2>
                         <ul class="found-list__ul">
                             <li class="hotels-item">
                             <div class="hotel-info">   
-                                <img src="" alt="" class="hoteld-item__img">
-                                <h3 class="hotel-item__h3 h3">Amara Resort & Spa</h3>
-                                <p class="hotels-item__p">Гостиница</p>
-                                <p class="hotels-item__p">ОТ 4000 Р.</p>
-                                <a href="" class="btn hotels-item__btn">ПОДРОБНЕЕ</a>
-                                <a href="" class="btn hotels-item__btn">ЗАБРОНИРОВАТЬ</a>
+                                <img src="img/hotels-image1.jpg" alt="" class="hoteld-item__img">
+                                <div class="hotel-info_inner">
+                                    <h3 class="hotel-item__h3 h3">Amara Resort & Spa</h3>
+                                    <p class="hotels-item__p">Гостиница</p>
+                                    <p class="hotels-item__p">ОТ 4000 Р.</p>
+                                    <a href="" class="btn hotels-item__btn">ПОДРОБНЕЕ</a>
+                                    <a href="" class="btn hotels-item__btn">ЗАБРОНИРОВАТЬ</a>
+                                </div>
                             </div>
                             <div class="hotel-rating">
                                  <ul class="star-rating">
-                                    <li><input type="radio" name="star-value" id=""></li>
-                                    <li><input type="radio" name="star-value" id=""></li>
-                                    <li><input type="radio" name="star-value" id=""></li>
-                                    <li><input type="radio" name="star-value" id=""></li>
-                                    <li><input type="radio" name="star-value" id=""></li> 
+                                    <li><input type="radio" name="star-value" class="stars__item"></li>
+                                    <li><input type="radio" name="star-value" class="stars__item"></li>
+                                    <li><input type="radio" name="star-value" class="stars__item"></li>
+                                    <li><input type="radio" name="star-value" class="stars__item"></li>
+                                    <li><input type="radio" name="star-value" class="stars__item"></li> 
                                  </ul>
                                  <em class="rating__text">Рейтинг: 8,5</em>
                             </div>
                             </li>
                             <li class="hotels-item">
                                     <div class="hotel-info">   
-                                            <img src="" alt="" class="hoteld-item__img">
-                                            <h3 class="hotel-item__h3 h3">Desert Quail Inn</h3>
-                                            <p class="hotels-item__p">Мотель</p>
-                                            <p class="hotels-item__p">ОТ 3000 Р.</p>
-                                            <a href="" class="btn hotels-item__btn">ПОДРОБНЕЕ</a>
-                                            <a href="" class="btn hotels-item__btn">ЗАБРОНИРОВАТЬ</a>
+                                            <img src="img/hotels-image2.jpg" alt="" class="hoteld-item__img">
+                                            <div class="hotel-info_inner">
+                                                <h3 class="hotel-item__h3 h3">Desert Quail Inn</h3>
+                                                <p class="hotels-item__p">Мотель</p>
+                                                <p class="hotels-item__p">ОТ 3000 Р.</p>
+                                                <a href="" class="btn hotels-item__btn">ПОДРОБНЕЕ</a>
+                                                <a href="" class="btn hotels-item__btn">ЗАБРОНИРОВАТЬ</a>
+                                            </div>
                                         </div>
                                         <div class="hotel-rating">
                                              <ul class="star-rating">
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li> 
+                                                <li><input type="radio" name="star-value" class="stars__item" ></li>
+                                                <li><input type="radio" name="star-value" class="stars__item" ></li>
+                                                <li><input type="radio" name="star-value" class="stars__item" ></li>
+                                                <li><input type="radio" name="star-value" class="stars__item" ></li>
+                                                <li><input type="radio" name="star-value" class="stars__item" ></li> 
                                              </ul>
                                              <em class="rating__text">Рейтинг: 8,9</em>
                                         </div>
                             </li>
                             <li class="hotels-item">
                                     <div class="hotel-info">   
-                                            <img src="" alt="" class="hoteld-item__img">
-                                            <h3 class="hotel-item__h3 h3">Villas at Poco Diablo</h3>
-                                            <p class="hotels-item__p">Апартаменты</p>
-                                            <p class="hotels-item__p">ОТ 2000 Р.</p>
-                                            <a href="" class="btn hotels-item__btn">ПОДРОБНЕЕ</a>
-                                            <a href="" class="btn hotels-item__btn">ЗАБРОНИРОВАТЬ</a>
+                                            <img src="img/hotels-image3.jpg" alt="" class="hoteld-item__img">
+                                            <div class="hotel-info_inner">
+                                                <h3 class="hotel-item__h3 h3">Villas at Poco Diablo</h3>
+                                                <p class="hotels-item__p">Апартаменты</p>
+                                                <p class="hotels-item__p">ОТ 2000 Р.</p>
+                                                <a href="" class="btn hotels-item__btn">ПОДРОБНЕЕ</a>
+                                                <a href="" class="btn hotels-item__btn">ЗАБРОНИРОВАТЬ</a>
+                                            </div>
                                         </div>
                                         <div class="hotel-rating">
                                              <ul class="star-rating">
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li>
-                                                <li><input type="radio" name="star-value" id=""></li> 
+                                                <li><input type="radio" name="star-value" class="stars__item"></li>
+                                                <li><input type="radio" name="star-value" class="stars__item"></li>
+                                                <li><input type="radio" name="star-value" class="stars__item"></li>
+                                                <li><input type="radio" name="star-value" class="stars__item"></li>
+                                                <li><input type="radio" name="star-value" class="stars__item"></li> 
                                              </ul>
                                              <em class="rating__text">Рейтинг: 9,2</em>
                                         </div>
                             </li>
                         </ul>
                     </section>
-                </mian>
+                </main>
             <footer class="footer main-footer">
                     <strong class="footer__container footer__hashtag">
                         #visitSEDONA
