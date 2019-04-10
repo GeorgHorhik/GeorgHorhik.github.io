@@ -224,7 +224,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url(../svg/white-tirangles.svg) no-repeat, url(../img/background_photo.png) no-repeat 0% 29%;
+  background: url(../svg/white-tirangles.svg) no-repeat, url(../img/background_photo.jpg) no-repeat 0% 29%;
   background-size: 100% , cover;
   background-position-y: 100.5% ,  0;
   max-width: 1200px;
