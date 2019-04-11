@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,OAAO,CAAC,eAAI",
+    "sources": [
+        "import.sass",
+        "_const.sass"
+    ],
+    "names": [],
+    "file": "import.css"
+}
