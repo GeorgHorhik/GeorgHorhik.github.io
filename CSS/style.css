@@ -120,6 +120,10 @@ html {
   content: url(../svg/checkbox-off.svg);
 }
 
+.custom-checkbox:disable + .label__input_checkbox {
+  opacity: 0.3;
+}
+
 /*Header*/
 .body {
   padding: 0;
@@ -754,6 +758,7 @@ html {
 
 .found__sort__item__active {
   color: #81b3d2 !important;
+  border-bottom: none;
 }
 
 .found__sort-size {
@@ -859,22 +864,36 @@ html {
 }
 
 .star-rating {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  height: 18px;
+}
+
+.star-rating::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0.5;
+  height: 18px;
+  width: 90px;
+  background-image: url(../svg/star.svg);
 }
 
 .star-rating__item {
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
+  -moz-appearance: none;
   display: inline-block;
   margin: 0;
 }
 
 .rating__text {
-  margin-top: 70px;
+  margin-top: 40px;
   display: inline-block;
   background-color: #f2f2f2;
   padding: 2px 15px;
@@ -1032,6 +1051,7 @@ html {
 }
 
 .booking__form {
+  color: #000;
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
@@ -1056,6 +1076,18 @@ html {
 
 .booking__input__text {
   width: 70%;
+  color: #000;
+  position: relative;
+}
+
+.booking::before {
+  content: url(../svg/calendar.svg);
+  position: absolute;
+  right: 3%;
+  top: 5px;
+  fill: #f00;
+  width: 22px;
+  height: 22px;
 }
 
 .form-signs {

@@ -1,16 +1,5 @@
 /*generall styles*/
-$hover: ":hover, &:focus"
-$hover-active: ":hover, &:focus, &:active"
-$light-gray: #eeeeee
-$gray: #f2f2f2
-$light-blue: #81b3d2
-$brown: #766357
-$active: $brown
-$brown-gray: #333333
-%zero
-    margin: 0
-    padding: 0
-    list-style: none
+@import const
 
 .visually-hidden
     margin: -1px
@@ -93,6 +82,9 @@ html
         left: -40px
 .custom-checkbox:checked + .label__input_checkbox::before
     content: url(../svg/checkbox-off.svg)
+.custom-checkbox:disable + .label__input_checkbox
+    opacity: 0.3
+
 
 
 /*Header*/
@@ -381,7 +373,7 @@ html
     line-height: 24px
     text-transform: uppercase
     &__output
-        border: 2px solid #ffffff;
+        border: 2px solid #ffffff
         width: 100%
         color: #000
         text-align: center
@@ -457,11 +449,11 @@ html
             color: transparent
         &::-ms-fill-lower 
             background: #fff
-            height: 2px;
+            height: 2px
             z-index: 1
         &::-ms-fill-upper 
             background: #fff
-            height: 2px;
+            height: 2px
             z-index: 1
         &::-ms-thumb 
             background-image: url(filter-button.svg)
@@ -508,12 +500,12 @@ html
                 box-sizing: border-box
                 font-size: 12px
                 font-weight: 400
-                line-height: 
                 border-bottom: 1px dotted $light-blue
                 color: rgba(black, 0.3)
                 text-decoration: none
             &__active
                 color: $light-blue !important
+                border-bottom: none
         &-size
             @extend %zero
             width: 34px
@@ -586,17 +578,32 @@ html
 
 .star-rating
     @extend %zero
+    margin-top: 20px
     display: flex
     position: relative
+    height: 18px
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        display: block
+        opacity: 0.5
+        height: 18px
+        width: 90px
+        background-image: url(../svg/star.svg)
+
+
     &__item
         appearance: none
+        -moz-appearance: none
         display: inline-block
         margin: 0
     & li
         @extend %zero
 
 .rating__text
-    margin-top: 70px
+    margin-top: 40px
     display: inline-block
     background-color: #f2f2f2
     padding: 2px 15px
@@ -667,6 +674,7 @@ html
         top: 100%
         padding: 55px
     &__form
+        color: #000
         font-size: 14px
         font-weight: 700
         line-height: 26px
@@ -681,6 +689,16 @@ html
             bottom: 6px
     &__input__text
         width: 70%
+        color: #000
+        position: relative
+        &::after
+            content: url(../svg/calendar.svg)
+            position: absolute
+            right: 3%
+            top: 5px
+            width: 22px
+            height: 22px
+
 .form-signs
     font-size: 16px
     width: 38px
