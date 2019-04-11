@@ -6,6 +6,7 @@ $gray: #f2f2f2
 $light-blue: #81b3d2
 $brown: #766357
 $active: $brown
+$brown-gray: #333333
 %zero
     margin: 0
     padding: 0
@@ -30,13 +31,19 @@ $active: $brown
     font-size: 30px
     font-weight: 700
     text-transform: uppercase
+.h3
+    font-size: 21px
+    font-weight: 700
+    line-height: 26px
+    text-transform: uppercase
 .p
-    color: #333333
+    color: $brown-gray
     font-family: "PT Sans"
     font-size: 14px
     font-weight: 400
     line-height: 24px
     text-transform: uppercase
+    
 .btn 
     display: inline-block
     text-decoration: none
@@ -156,7 +163,7 @@ html
     height: 70
 .intro
     display: flex
-    flex-direction: column
+    flex-direction: column  
     justify-content: center
     background: url(../svg/white-tirangles.svg) no-repeat, url(../img/background_photo.jpg) no-repeat 0% 29%    
     background-size: 100% , cover
@@ -196,7 +203,7 @@ html
     margin: 0 auto
     margin-top: 61px
     width: 450px
-    color: #333333
+    color: $brown-gray
 .features__introduction
     margin: 0 auto
     margin-top: 28px
@@ -319,7 +326,7 @@ html
         background-image: url(../img/filter_background.png)
         background-position: center 
         overflow: hidden
-        color: #333333
+        color: $brown-gray
         width: 100%
     &__fieldset
         padding: 0
@@ -548,14 +555,65 @@ html
     flex-direction: column
     list-style: none
 .hotels-item
-    display: flex
+    display: flex   
     justify-content: space-between
+    &__h3
+        @extend %zero
+    &__img
+        display: block
+        margin-right: 30px
+    &__p
+        @extend %zero
+        line-height: 21px
+        margin: 7px 40px 7px 0px
+        max-width: 100px
+        display: inline-block
+    &__btn
+        margin-right: 3px
+        font-size: 14px
+        font-weight: 700
+        line-height: 21px
+        padding: 4px 15px
+
+
 .hotel-info
     display: flex
     justify-content: space-between
     width: 424px
     align-items: center
-   
+    margin-bottom: 30px
+
+
+.star-rating
+    @extend %zero
+    display: flex
+    position: relative
+    &__item
+        appearance: none
+        display: inline-block
+        margin: 0
+    & li
+        @extend %zero
+
+.rating__text
+    margin-top: 70px
+    display: inline-block
+    background-color: #f2f2f2
+    padding: 2px 15px
+    color: #666
+@for $star from 1 through 5
+    .star-rating li:nth-child(#{$star}) .star-rating__item,  .star-rating li:nth-child(#{$star})
+        width: 18px * $star
+        z-index: 10-$star
+        height: 18px 
+        position: absolute
+    .star-rating li:nth-child(#{$star}) .star-rating__item:checked,
+    .star-rating li:nth-child(#{$star}) .star-rating__item:focus,
+    .star-rating li:nth-child(#{$star}) .star-rating__item:hover
+        background-image: url(../svg/star.svg)
+        background-repeat: repeat
+        
+        
 /*Footer-sytles*/
 .booking
     position: relative
